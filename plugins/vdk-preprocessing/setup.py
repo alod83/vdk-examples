@@ -14,7 +14,7 @@ setuptools.setup(
     description="Versatile Data Kit SDK Preprocessing plugin to manipulate an already ingested table.",
     long_description=pathlib.Path("README.md").read_text(),
     long_description_content_type="text/markdown",
-    install_requires=["vdk-core", "pandas"],
+    install_requires=["vdk-core"],
     package_dir={"": "src"},
     packages=setuptools.find_namespace_packages(where="src"),
     entry_points={"vdk.plugin.run": ["vdk-preprocessing = vdk.plugin.preprocessing.preprocessing_plugin"]},

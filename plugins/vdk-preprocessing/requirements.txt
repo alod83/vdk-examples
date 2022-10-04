@@ -1,4 +1,3 @@
-pandas
 vdk-core
 
 vdk-sqlite
