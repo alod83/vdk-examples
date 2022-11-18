@@ -1,0 +1,4 @@
+vdk-core
+pandas
+# testing
+vdk-test-utils
