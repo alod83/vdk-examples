@@ -6,7 +6,7 @@ from typing import Optional
 from typing import Tuple
 import pandas as pd
 
-from vdk.internal.builtin_plugins.ingestion.ingester_base import IIngesterPlugin
+from vdk.api.plugin.plugin_input import IIngesterPlugin
 from vdk.internal.builtin_plugins.run.job_context import JobContext
 from vdk.internal.core import errors
 
@@ -28,4 +28,6 @@ class IngestWithoutMissingValues(IIngesterPlugin):
         df = pd.DataFrame.from_dict(payload)
         df.dropna(inplace=True)
         
-        return df.to_dict(), metadata
+        return df.to_dict(orient='records'), metadata
+
+    
